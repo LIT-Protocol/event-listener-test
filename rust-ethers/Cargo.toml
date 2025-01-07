@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ethers = "2.0.14"
+alloy = {version = "0.9.2", features = ["full"] }
+ethers = { version = "2.0.14" }
+futures-util = "0.3.31"
+tokio = { version = "1.36", features = ["full"] }
+url = "2.5"

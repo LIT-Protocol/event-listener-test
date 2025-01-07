@@ -2,8 +2,10 @@ import { ethers } from "hardhat";
 
 async function main() {
   // deploy the emitter contract
-  const Emitter = await ethers.getContractFactory("Emitter");
-  const contract = await Emitter.deploy();
+  const contract = await ethers.getContractAt(
+    "Emitter",
+    "0xEe1033c70701fe0ff133436AdD566c1877728e2b"
+  );
 
   // listen to the contract
   contract.on("SomethingHappened", (id: number) => {
